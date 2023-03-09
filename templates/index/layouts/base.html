@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{% static 'index/css/final.css'%}">
+    <title>Inicio</title>
+    {% block script %}{% endblock %}
+
+
+    {% block link %}{% endblock %}
+
+</head>
+
+<body class="container">
+
+
+    <header>{% include 'index/layouts/partials/men.html'%}</header>
+    <hr>
+    {% if request.user.is_authenticated%}
+        <h1 id="us" style="--i:#008080;--j:#2F4F4F;">@ {{request.user}}</h1>
+    {% endif %}
+    <nav class="nav1">
+        <ul>
+      		<li style="--i:#008080;--j:#2F4F4F;">
+        		<span class="icon"><i class="fa fi-rr-home"></i></span>
+        		<span class="titulo"><a href="{% url 'index' %}">Home</a></span>
+      		</li>
+        </ul>
+    </nav>
+
+
+
+        <nav class="second-nav">
+            <a class="new" href="{% url 'newpublication' %}">Crear nuevo post</a>
+        </nav>
+
+    {% block content %}{% endblock %}
+
+
+</body>
+
+</body>
+</html>

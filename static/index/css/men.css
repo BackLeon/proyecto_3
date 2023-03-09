@@ -1,0 +1,305 @@
+
+
+
+article {
+    background-color: white;
+    width: 93%;
+    margin: auto;
+    padding: 40px 10;
+    border-bottom: 2px solid #ECEEEF;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgb(117 117 117 / 90%);
+
+    margin-top: 50px;
+
+}
+
+.username {
+
+    margin-bottom: .5rem;
+
+}
+
+
+.username a{
+
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #008080;
+    font-family: sans-serif;
+    font-weight: 900;
+
+}
+
+.container-article {
+
+    display: flex;
+
+    height: 140px;
+
+}
+
+.container-article img {
+
+    height: 68px;
+    width: 68px;
+    margin-right: 10px;
+    border-radius: 50px;
+    padding: 20px;
+
+}
+
+
+
+article:last-child {
+
+    border-bottom: 0;
+
+}
+
+time {
+
+    font-size: .9rem;
+    opacity: .9;
+    color: #008080;
+    font-family: sans-serif;
+    font-weight: 700;
+
+
+
+}
+
+.post {
+
+    font-size: .94rem;
+    font-weight: 800;
+    margin-top: 10px;
+    font-family: sans-serif;
+    padding: 10px 0;
+
+
+}
+
+
+
+.profile {
+    display: flex;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    width: 93%;
+    margin: auto;
+    padding: 40px 10;
+    border-bottom: 0px solid #ECEEEF;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 90%);
+    margin-top: 50px;
+
+}
+
+.profile .profnew {
+
+    text-decoration: none;
+	text-align: right;
+	text-transform: uppercase;
+  	color: #008080;
+  	font-size: 1.1em ;
+  	letter-spacing: 0.1em;
+  	font-family: sans-serif;
+  	font-weight: 650;
+
+}
+
+.profile img {
+
+    height: 68px;
+    width: 68px;
+    margin-right: 10px;
+    border-radius: 80px;
+    padding: 15px;
+
+}
+
+.profestadisticas1 {
+
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+
+}
+
+.publiv {
+
+
+
+    background: white;
+    width: 93%;
+    margin: auto;
+    padding: 40px 10;
+    border-bottom: 0px solid #ECEEEF;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 90%);
+    margin-top: 50px;
+
+}
+
+
+.publiv .publivimgprof {
+
+    height: 54px;
+    width: 68px;
+    margin-right: 10px;
+    border-radius: 80px;
+    padding: 15px;
+    position: relative;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.publiv .publivimgprof2 {
+
+    height: 68px;
+    width: 68px;
+    border-radius: 80px;
+    left: -20px;
+    position: relative;
+
+}
+
+
+.publiv .publivimgprof3 {
+
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #008080;
+    font-family: sans-serif;
+    font-weight: 900;
+    left: -15px;
+    position: relative;
+
+}
+
+.publiv .publivimgpro {
+
+    height: 68px;
+    width: 68px;
+    margin-right: 10px;
+    border-radius: 80px;
+    padding: 15px;
+    position: relative;
+    left: 15px;
+    left: -22px;
+    top: -12px;
+}
+
+.publiv .publivimgprof4 {
+
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 900;
+    width: 300px;
+    left: -15px;
+    position: relative;
+    display: grid;
+}
+
+.imgtamaño {
+
+    width: 500px;
+    height: 470px;
+    background-color: black;
+    display: grid;
+}
+
+.imgideal {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+
+    position: relative;
+
+
+
+}
+
+.profestadisticas {
+
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+
+}
+
+.verlo {
+
+    display: flex;
+    top: -98px;
+    position: relative;
+    left: 350px;
+    width: 60px;
+    height: 9px;
+
+}
+
+
+
+.verlo2 {
+
+    text-decoration: none;
+    color: rgb(0, 149, 246);
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    width: 60px;
+    height: 9px;
+    font-size: .9rem;
+
+}
+
+
+.verlo2 {
+
+  border: none;
+  color: black;
+  outline: none;
+  padding: 6px 40px 10px;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 34px;
+
+}
+
+.verlo2:hover {
+  background: linear-gradient(45deg, var(--i), var(--j));;
+  transition: 0.5s;
+  color: white;
+}
+.verlo2:hover:before,
+.verlo2:hover:after {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+
+.actu {
+
+    display: grid;
+    top: -44px;
+    position: relative;
+    left: 3px;
+
+
+}

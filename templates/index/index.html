@@ -1,0 +1,37 @@
+{% extends 'index/layouts/base.html'%}
+{% load humanize %}
+{% load static %}
+
+{% block link %}<link rel="stylesheet" href="{% static 'index/css/men.css'%}">{% endblock %}
+
+{% block content %}
+
+{% for publications in pub %}
+
+    <article>
+        <div class="container-article">
+            <img src="{{ publications.user.profileuser.profile_image.url }}">
+
+            <div>
+                <h2 class="username"><a href="{% url 'viewprofile' id=publications.user_id %}">@ {{publications.user.username}}</a></h2>
+                <time>{{publications.publication_date|naturaltime}}</time>
+                <div class="post">Publication: {{publications.publication_name}}</div>
+                <div class="actu">
+                    <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'viewpublication' pk=publications.id %}">ver</a></h2>
+                    {% if request.user == publications.user %}
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'updatepublication' pk=publications.id %}">Actualizar</a></h2>
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'delete' id=publications.id %}">Eliminar</a></h2>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+
+    </article>
+
+{% endfor %}
+
+
+
+{% endblock %}
+

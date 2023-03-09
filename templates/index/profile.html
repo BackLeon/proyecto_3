@@ -1,0 +1,44 @@
+{% extends 'index/layouts/base.html' %}
+{% load humanize %}
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'index/css/men.css'%}">{% endblock %}
+{% block content %}
+
+
+    <nav class="profile" id="profile" style="--i:#b7b9b9;--j:#ffffff;">
+        <img class="imgprof" src="{{ request.user.profileuser.profile_image.url }}">
+        <h2><a href="#" class="profnew">{{request.user}}</a></h2>
+        <div class="profestadisticas">
+
+        </div>
+    </nav>
+
+
+
+
+
+
+{% for publi in prof %}
+<article>
+    <div class="container-article">
+        <img src="{{ publi.user.profileuser.profile_image.url }}">
+
+        <div>
+            <h2 class="username"><a href="#">@ {{publi.user.username}}</a></h2>
+                <time>{{publi.publication_date|naturaltime}}</time>|
+                <time>{{publi.publication_date}}</time>
+            <div class="post">Publication: {{publi.publication_name}}</div>
+            <div class="actu">
+                    <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'viewpublication' pk=publi.id %}">ver</a></h2>
+                    {% if request.user == publi.user %}
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'updatepublication' pk=publi.id %}">Actualizar</a></h2>
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'delete' id=publi.id %}">Eliminar</a></h2>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+
+</article>
+{% endfor %}
+
+{% endblock %}

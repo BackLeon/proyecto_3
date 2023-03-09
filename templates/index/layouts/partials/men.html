@@ -1,0 +1,30 @@
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'index/css/final.css'%}">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+{% endblock%}
+
+
+
+    <nav>
+        <ul>
+      		<li style="--i:#008080;--j:#2F4F4F;">
+        		<span class="icon"><i class="fa fi-rr-home"></i></span>
+        		<span class="titulo"><a href="{% url 'index'%}">Home</a></span>
+      		</li>
+			  <li style="--i:#008080;--j:#2F4F4F;">
+				<span class="icon"><i class="fa fi-rr-user"></i></span>
+				<span class="titulo"><a href="{% url 'profile' %}">Profile</a></span>
+			  </li>
+
+			 <li style="--i:#008080;--j:#2F4F4F;">
+				<span class="icon"><i class="fa fi-rr-settings"></i></span>
+				<span class="titulo"><a href="{% url 'updateprofile' pk=user.id %}">Config</a></span>
+			  </li>
+			 <li style="--i:#008080;--j:#2F4F4F;">
+				<span class="icon"><i class="fa fi-rr-moon"></i></span>
+				<span class="titulo"><a href="{% url 'logout' %}">Logout</a></span>
+			  </li>
+	 </ul>
+    </nav>
+

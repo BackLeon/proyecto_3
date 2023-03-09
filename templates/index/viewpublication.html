@@ -1,0 +1,39 @@
+{% extends 'index/layouts/base.html'%}
+{% load static%}
+{% load humanize %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'index/css/men.css'%}">
+
+{% endblock %}
+
+
+{% block content%}
+
+    <nav class="publiv" id="publiv" style="--i:#b7b9b9;--j:#ffffff;">
+        <div class="publivimgprof">
+            <img class="publivimgprof2" src="{{ pubview.user.profileuser.profile_image.url }}">
+            <div class="publivimgpro" >
+                <a href="#" class="publivimgprof3" >{{pubview.user.username}}</a>
+                <time class="publivimgprof4">{{pubview.publication_date|naturaltime}}</time>
+            </div>
+
+        </div>
+        <hr>
+        <div class="profestadisticas1">
+
+            {% if pubview.publication_image.url == blanco.jpg %}
+                <img src="{{ pubview.publication_image.url }}">
+            {% else %}
+                <div class="imgtamaño">
+                    <img class="imgideal" src="{{ pubview.publication_image.url }}">
+                </div>
+            {% endif%}
+            <h2>Seguidores: </h2><h2>siguiendo: </h2><h2>Likes: </h2>
+        </div>
+        <hr>
+    </nav>
+
+
+
+
+{% endblock %}

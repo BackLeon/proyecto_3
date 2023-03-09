@@ -1,0 +1,67 @@
+{% load static %}
+
+{% block link %}
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel="stylesheet" 		href="{% static 'index/css/menu.css'%}">
+
+{% endblock %}
+
+    <ul>
+      <li style="--i:#80FF72;--j:#5ec3d4;">
+        <span class="icon"><i class="fa fi-rr-home"></i></span>
+        <span class="titulo">Inicio</span>
+      </li>
+      <li style="--i:#80FF72;--j:#5ec3d4;">
+        <span class="icon"><i class="fa fi-rr-user"></i></span>
+        <span class="titulo">Perfil</span>
+      </li>
+      <li style="--i:#80FF72;--j:#5ec3d4;">
+        <span class="icon"><i class="fa fi-rr-users-alt"></i></span>
+        <span class="titulo">Seguidores</span>
+      </li>
+      <li style="--i:#80FF72;--j:#5ec3d4;">
+        <span class="icon"><i class="fa fi-rr-settings"></i></span>
+        <span class="titulo">Configurar</span>
+      </li>
+      <li style="--i:#80FF72;--j:#5ec3d4;">
+        <span class="icon"><i class="fa fi-rr-moon"></i></span>
+        <span class="titulo">Salir</span>
+      </li>
+    </ul>
+<style>
+  style="--i:#80FF72;--j:#5ec3d4;"
+  ESTOS DOS VAN EN NAV UL LI
+  background: linear-gradient(45deg, var(--i), var(--j));
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+</style>
+
+
+
+    <nav class="nav1">
+        <ul>
+      		<li style="--i:#008080;--j:#2F4F4F;">
+        		<span class="icon"><i class="fa fi-rr-home"></i></span>
+        		<span class="titulo"><a href="#">Home</a></span>
+      		</li>
+        </ul>
+    </nav>
+
+
+<style>
+    .verlo {
+
+    display: flex;
+    top: -98px;
+    position: relative;
+    left: 350px;
+
+}
+</style>
+
+
+<menu>
+    		 <li style="--i:#008080;--j:#2F4F4F;">
+				<span class="icon"><i class="fa fi-rr-users-alt"></i></span>
+				<span class="titulo"><a href="#">Followers</a></span>
+			  </li>
+</menu>

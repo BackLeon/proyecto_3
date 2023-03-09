@@ -1,0 +1,53 @@
+{% extends 'index/layouts/base.html' %}
+{% load humanize %}
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'index/css/men.css'%}">{% endblock %}
+{% block content %}
+
+    <nav class="profile" id="profile" style="--i:#b7b9b9;--j:#ffffff;">
+        <img class="imgprof" src="{{ prof.profileuser.profile_image.url }}">
+        <h2><a href="#" class="profnew">{{prof.username}}</a></h2>
+        <div class="profestadisticas">
+            {% if request.user.is_authenticated %}
+                {% if user.username != request.user.username %}
+                    {% if user not in request.user.profile.following %}
+                        <button><a href="{% url 'follow' id=prof.user_id %}">Follow</a></button>
+                    {% else %}
+                        <button><a href="{% url 'unfollow' user %}">UnFollow</a></button>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+            <button><a>Follow</a></button>
+{% for fol_publication in fols %}
+        </div>
+    </nav>
+
+
+    {% for p in pub %}
+    <article>
+        <div class="container-article">
+            <img src="{{ p.user.profileuser.profile_image.url }}">
+
+            <div>
+                <h2 class="username"><a href="#">@ {{p.publication_name}}</a></h2>
+                    <time>{{p.publication_date|naturaltime}}</time>|
+                    <time>{{p.publication_date}}</time>
+                <div class="post">Publication: {{p.publication_name}}</div>
+                <div class="actu">
+                    <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'viewpublication' pk=p.id %}">ver</a></h2>
+                    {% if request.user == p.user %}
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'updatepublication' pk=p.id %}">Actualizar</a></h2>
+                        <h2 class="verlo"><a class="verlo2" style="--i:#008080;--j:#2F4F4F;" href="{% url 'delete' id=p.id %}">Eliminar</a></h2>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+
+
+
+
+{% endblock %}
+
+

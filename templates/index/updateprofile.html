@@ -1,0 +1,30 @@
+{% extends 'index/layouts/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'index/css/men.css'%}">
+<link rel="stylesheet" href="{% static 'index/css/inputs.css'%}">
+{% endblock %}
+
+
+{% block content%}
+
+    {% if request.user.id == prof.id %}
+        <nav class="publiv" id="publiv" style="--i:#b7b9b9;--j:#ffffff;">
+            <form enctype=multipart/form-data method="POST">
+               <div class="cocos">
+                   {% csrf_token%}
+                    {{form.as_p}}
+                   <input id="cursor" type="submit" value="Actualizar">
+               </div>
+            </form>
+        </nav>
+    {% else%}
+        <h1>Este no es tu perfil</h1>
+    {% endif %}
+
+
+
+
+
+{% endblock %}
